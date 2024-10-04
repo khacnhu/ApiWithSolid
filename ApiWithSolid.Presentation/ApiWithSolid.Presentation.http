@@ -1,0 +1,6 @@
+@ApiWithSolid.Presentation_HostAddress = http://localhost:5043
+
+GET {{ApiWithSolid.Presentation_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
