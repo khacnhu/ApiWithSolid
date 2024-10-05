@@ -1,9 +1,7 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ApiWithSolid.Application.MappingImplementation;
+using ApiWithSolid.Application.MappingInterface;
+using ApiWithSolid.Application.UsecaseInterface;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace ApiWithSolid.Application.DependencyInjection
 {
@@ -11,6 +9,8 @@ namespace ApiWithSolid.Application.DependencyInjection
     {
         public static IServiceCollection AddApplicationServices(this IServiceCollection services)
         {
+            services.AddScoped<IProductService, ProductService>();
+            services.AddScoped<IProductMapper, ProductMapper>();
             return services;
         }
     }

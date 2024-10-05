@@ -35,7 +35,7 @@ namespace ApiWithSolid.Presentation.Controllers
         public async Task<IActionResult> CreateProduct([FromBody] CreateProductDto createProductDto)
         {
             await productService.AddProductAsync(createProductDto);
-            return CreatedAtAction(nameof(GetById), new { id = createProductDto.Name }, createProductDto);
+            return Ok("ADD PRODUCT SUCCESSFULLY");
         }
 
 
